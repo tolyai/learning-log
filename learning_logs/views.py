@@ -4,6 +4,8 @@ from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
 from django.http import Http404
 
+"""Defines views"""
+
 def check_topic_owner(request, topic):
     if topic.owner != request.user:
         raise Http404
